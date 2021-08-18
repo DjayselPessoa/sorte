@@ -1,4 +1,5 @@
-from folder1.defSorte import temp
+from folder1.defSorteAcerto import acerto
+from folder1.defSorteErro import erro
 import random
 
 
@@ -19,62 +20,12 @@ while chances < 4:
             print("Escreva um número inteiro entre 0 e 100!")
             raise ValueError("ERRO 1A")
         else:
-            if valorJogador == valorResposta and chances == 1:
-                print("Vitória!\nSeu nível de sorte está magnífico hoje! Número certo na primeira jogada! Parabéns e aproveite!")
+            if valorJogador == valorResposta:
+                print(acerto(chances))
                 break
-            elif valorJogador == valorResposta and chances == 2:
-                print("Vitória!\nVocê pode até achar que não tem sorte, mas a verdade é que só precisou de duas tentativas para acertar! Parabéns!")
-                break
-            elif valorJogador == valorResposta and chances == 3:
-                print("Vitória!\nSua sorte não está na melhor forma, mas pense que só precisou de três tentativas! Parabéns!")
-                break
-            elif valorJogador != valorResposta and chances == 1:
-                print("Não se preocupe que você ainda possui duas tentativas!")
-                valorAntigo = valorJogador
-                if valorJogador < valorResposta:
-                    print(f"O número está entre {valorJogador} e 100!")
-                    extraTeste = valorResposta - valorJogador
-                    # print(extraTeste)
-                    print(temp(extraTeste))
-                    exatoValor = True
-                elif valorJogador > valorResposta:
-                    print(f"O número está entre 0 e {valorJogador}!")
-                    extraTeste = valorJogador - valorResposta
-                    # print(extraTeste)
-                    print(temp(extraTeste))
-                    exatoValor = False
-                chances = 2
+            elif valorJogador != valorResposta:
+                chances = erro(chances, valorJogador, valorResposta)
                 raise ValueError("Número incorreto!")
-            elif valorJogador != valorResposta and chances == 2:
-                print("Não se preocupe que você ainda possui uma tentativa!")
-                if exatoValor:
-                    if valorJogador < valorResposta:
-                        print(f"O número está entre {valorJogador} e 100!")
-                        extraTeste = valorResposta - valorJogador
-                        # print(extraTeste)
-                        print(temp(extraTeste))
-                    elif valorJogador > valorResposta:
-                        print(f"O número está entre {valorAntigo} e {valorJogador}!")
-                        extraTeste = valorJogador - valorResposta
-                        # print(extraTeste)
-                        print(temp(extraTeste))
-                elif exatoValor == False:
-                    if valorJogador < valorResposta:
-                        print(f"O número está entre {valorJogador} e {valorAntigo}!")
-                        extraTeste = valorResposta - valorJogador
-                        # print(extraTeste)
-                        print(temp(extraTeste))
-                    elif valorJogador > valorResposta:
-                        print(f"O número está entre 0 e {valorJogador}!")
-                        extraTeste = valorJogador - valorResposta
-                        # print(extraTeste)
-                        print(temp(extraTeste))
-                chances = 3
-                raise ValueError("Número incorreto!")
-            elif valorJogador != valorResposta and chances == 3:
-                print("Hoje é um dia em que sua sorte está dormindo! Mas lembre-se: o que chamamos por sorte é quando oportunidade e habilidade se encontram!\nAté a próxima!")
-                print(f"O valor que o jogo escolheu foi {valorResposta}")
-                chances = 4
-                print("Fim do Jogo!")
+
     except ValueError as e:
         print("FALHOU - ", e)
