@@ -10,7 +10,7 @@ def erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor):
     chances = chances
 
     if chances == 1:
-        print("Não se preocupe que você ainda possui duas tentativas!")
+        print("\nNúmero errado!\nNão se preocupe que você ainda possui duas tentativas!\n")
         valorAntigo = valorJogador
         if valorJogador < valorResposta:
             print(f"O número está entre {valorJogador} e 100!")
@@ -31,7 +31,7 @@ def erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor):
             chances = 2
             return chances, valorAntigo, exatoValor
     elif chances == 2:
-        print("Não se preocupe que você ainda possui uma tentativa!")
+        print("\nNúmero errado!\nNão se preocupe que você ainda possui uma tentativa!\n")
         if exatoValor:
             if valorJogador < valorResposta:
                 print(f"O número está entre {valorJogador} e 100!")
@@ -67,8 +67,8 @@ def erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor):
                 chances = 3
                 return chances, valorAntigo, exatoValor
     elif chances == 3:
-        print("Hoje é um dia em que sua sorte está dormindo! Mas lembre-se: o que chamamos por sorte é quando oportunidade e habilidade se encontram!\nAté a próxima!")
-        print(f"O valor que o jogo escolheu foi {valorResposta}")
+        print("\nHoje é um dia em que sua sorte está dormindo!\nMas lembre-se: o que chamamos por sorte é quando oportunidade e habilidade se encontram!\nAté a próxima!\n")
+        print(f"O valor que o jogo escolheu foi {valorResposta}\n")
         chances = 4
         print("Fim do Jogo!")
         return chances, valorAntigo, exatoValor
