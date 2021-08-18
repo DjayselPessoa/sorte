@@ -16,7 +16,7 @@ def erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor):
             print(f"O número está entre {valorJogador} e 100!")
             extraTeste = valorResposta - valorJogador
             # print(extraTeste)
-            print("ok1")
+            # print("ok1")
             print(temp(extraTeste))
             exatoValor = True
             chances = 2
@@ -25,7 +25,7 @@ def erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor):
             print(f"O número está entre 0 e {valorJogador}!")
             extraTeste = valorJogador - valorResposta
             # print(extraTeste)
-            print("ok2")
+            # print("ok2")
             print(temp(extraTeste))
             exatoValor = False
             chances = 2
@@ -37,7 +37,7 @@ def erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor):
                 print(f"O número está entre {valorJogador} e 100!")
                 extraTeste = valorResposta - valorJogador
                 # print(extraTeste)
-                print("ok3")
+                # print("ok3")
                 print(temp(extraTeste))
                 chances = 3
                 return chances, valorAntigo, exatoValor
@@ -45,7 +45,7 @@ def erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor):
                 print(f"O número está entre {valorAntigo} e {valorJogador}!")
                 extraTeste = valorJogador - valorResposta
                 # print(extraTeste)
-                print("ok4")
+                # print("ok4")
                 print(temp(extraTeste))
                 chances = 3
                 return chances, valorAntigo, exatoValor
@@ -54,7 +54,7 @@ def erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor):
                 print(f"O número está entre {valorJogador} e {valorAntigo}!")
                 extraTeste = valorResposta - valorJogador
                 # print(extraTeste)
-                print("ok5")
+                # print("ok5")
                 print(temp(extraTeste))
                 chances = 3
                 return chances, valorAntigo, exatoValor
@@ -62,7 +62,7 @@ def erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor):
                 print(f"O número está entre {valorAntigo} e {valorJogador}!")
                 extraTeste = valorJogador - valorResposta
                 # print(extraTeste)
-                print("ok6")
+                # print("ok6")
                 print(temp(extraTeste))
                 chances = 3
                 return chances, valorAntigo, exatoValor
