@@ -6,6 +6,7 @@ import random
 valorResposta = random.randrange(0, 101)
 valorResposta = int(valorResposta)
 # print(valorResposta)
+processar = ""
 valorAntigo = 0
 exatoValor = True
 extraTeste = 0
@@ -24,7 +25,7 @@ while chances < 4:
                 print(acerto(chances))
                 break
             elif valorJogador != valorResposta:
-                chances = erro(chances, valorJogador, valorResposta)
+                chances, valorAntigo = erro(chances, valorJogador, valorResposta, valorAntigo)                
                 raise ValueError("Número incorreto!")
 
     except ValueError as e:
