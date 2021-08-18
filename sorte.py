@@ -1,3 +1,4 @@
+from folder1.defSorte import temp
 import random
 
 
@@ -34,23 +35,13 @@ while chances < 4:
                     print(f"O número está entre {valorJogador} e 100!")
                     extraTeste = valorResposta - valorJogador
                     # print(extraTeste)
-                    if extraTeste >= 50:
-                        print("Está muito frio!")
-                    elif 50 > extraTeste >= 30:
-                        print("Está morno!")
-                    elif 30 > extraTeste >= 1:
-                        print("Está quente!")
+                    print(temp(extraTeste))
                     exatoValor = True
                 elif valorJogador > valorResposta:
                     print(f"O número está entre 0 e {valorJogador}!")
                     extraTeste = valorJogador - valorResposta
                     # print(extraTeste)
-                    if extraTeste >= 50:
-                        print("Está muito frio!")
-                    elif 50 > extraTeste >= 30:
-                        print("Está morno!")
-                    elif 30 > extraTeste >= 1:
-                        print("Está quente!")
+                    print(temp(extraTeste))
                     exatoValor = False
                 chances = 2
                 raise ValueError("Número incorreto!")
@@ -61,43 +52,23 @@ while chances < 4:
                         print(f"O número está entre {valorJogador} e 100!")
                         extraTeste = valorResposta - valorJogador
                         # print(extraTeste)
-                        if extraTeste >= 50:
-                            print("Está muito frio!")
-                        elif 50 > extraTeste >= 30:
-                            print("Está morno!")
-                        elif 30 > extraTeste >= 1:
-                            print("Está quente!")
+                        print(temp(extraTeste))
                     elif valorJogador > valorResposta:
                         print(f"O número está entre {valorAntigo} e {valorJogador}!")
                         extraTeste = valorJogador - valorResposta
                         # print(extraTeste)
-                        if extraTeste >= 50:
-                            print("Está muito frio!")
-                        elif 50 > extraTeste >= 30:
-                            print("Está morno!")
-                        elif 30 > extraTeste >= 1:
-                            print("Está quente!")
+                        print(temp(extraTeste))
                 elif exatoValor == False:
                     if valorJogador < valorResposta:
                         print(f"O número está entre {valorJogador} e {valorAntigo}!")
                         extraTeste = valorResposta - valorJogador
                         # print(extraTeste)
-                        if extraTeste >= 50:
-                            print("Está muito frio!")
-                        elif 50 > extraTeste >= 30:
-                            print("Está morno!")
-                        elif 30 > extraTeste >= 1:
-                            print("Está quente!")
+                        print(temp(extraTeste))
                     elif valorJogador > valorResposta:
                         print(f"O número está entre 0 e {valorJogador}!")
                         extraTeste = valorJogador - valorResposta
                         # print(extraTeste)
-                        if extraTeste >= 50:
-                            print("Está muito frio!")
-                        elif 50 > extraTeste >= 30:
-                            print("Está morno!")
-                        elif 30 > extraTeste >= 1:
-                            print("Está quente!")
+                        print(temp(extraTeste))
                 chances = 3
                 raise ValueError("Número incorreto!")
             elif valorJogador != valorResposta and chances == 3:
