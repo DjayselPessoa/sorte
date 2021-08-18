@@ -1,7 +1,7 @@
 import random
 
 
-valorResposta = random.randrange(0, 100)
+valorResposta = random.randrange(0, 101) # o 0 é incluido mas o 101 não, indo somente até 100
 valorResposta = int(valorResposta)
 # print(valorResposta)
 valorAntigo = 0
