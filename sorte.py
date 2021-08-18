@@ -17,7 +17,7 @@ while chances < 4:
     try:
         valorJogador = int(input(f"Informe o {chances}º número: "))
         if not 0 <= valorJogador <= 100:
-            print("Escreva um número inteiro entre 0 e 100!")
+            print("Escreva um número inteiro entre 0 e 100!\n")
             raise ValueError("ERRO 1A")
         else:
             if valorJogador == valorResposta:
@@ -26,9 +26,9 @@ while chances < 4:
             elif valorJogador != valorResposta:
                 chances, valorAntigo, exatoValor = erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor)
                 if chances < 4:
-                    raise ValueError("Número incorreto!\n")
+                    raise ValueError("")
                 elif chances == 4:
-                    print("Até a próxima!")
+                    print("Até a próxima!\n")
 
     except ValueError as e:
-        print("FALHOU - ", e)
+        print("\n", e)
