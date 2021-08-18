@@ -24,8 +24,11 @@ while chances < 4:
                 print(acerto(chances))
                 break
             elif valorJogador != valorResposta:
-                chances, valorAntigo, exatoValor = erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor)                
-                raise ValueError("Número incorreto!")
+                chances, valorAntigo, exatoValor = erro(chances, valorJogador, valorResposta, valorAntigo, exatoValor)
+                if chances < 4:
+                    raise ValueError("Número incorreto!\n")
+                elif chances == 4:
+                    print("Até a próxima!")
 
     except ValueError as e:
         print("FALHOU - ", e)
